@@ -1,0 +1,15 @@
+public class ScoreCalculatorDynamic {
+    public integer maths;
+    public integer phs;
+    public integer chem;
+	
+    public ScoreCalculatorDynamic(integer maths, integer phs, integer chemistry){
+        this.maths = maths;
+        this.phs = phs;
+        this.chem = chemistry;
+    }
+    
+    public void totalMks() {
+        system.debug(this.maths + this.phs + this.chem);
+    }
+}
