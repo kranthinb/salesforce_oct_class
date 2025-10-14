@@ -1,0 +1,50 @@
+public class Calculator {
+    
+    public static void sum(integer num1, integer num2) {
+        if(num1 == null && num2 == null) {
+            system.debug('first and second values are empty');
+        }else if(num1 == null) {
+            system.debug('first value is empty');
+        }else if(num2 == null) {
+            system.debug('second value is empty');
+        }else {
+            system.debug(num1 + num2);
+        }
+    }
+    
+    public static void diff(integer num1, integer num2) {
+        if(num1 == null && num2 == null) {
+            system.debug('first and second values are empty');
+        }else if(num1 == null) {
+            system.debug('first value is empty');
+        }else if(num2 == null) {
+            system.debug('second value is empty');
+        }else {
+            system.debug(num1 - num2);
+        }
+    }
+    
+    public static void mul(integer num1, integer num2) {
+        if(num1 == null && num2 == null) {
+            system.debug('first and second values are empty');
+        }else if(num1 == null) {
+            system.debug('first value is empty');
+        }else if(num2 == null) {
+            system.debug('second value is empty');
+        }else {
+            system.debug(num1 * num2);
+        }
+    }
+    
+    public static void div(integer num1, integer num2) {
+        if(num1 == null && num2 == null) {
+            system.debug('first and second values are empty');
+        }else if(num1 == null) {
+            system.debug('first value is empty');
+        }else if(num2 == null) {
+            system.debug('second value is empty');
+        }else {
+            system.debug(num1 / num2);
+        }
+    }
+}
