@@ -1,0 +1,45 @@
+public class ScoreCalculator {
+    
+    public static void totalMks(integer maths, integer phs, integer chem) {
+        system.debug(maths + phs + chem);
+    }
+    
+    public static void totalMkpercent(integer maths, integer phs, integer chem) {
+        final integer totalMks = 300;
+        final integer percentVal = 100;
+        integer totalMksGot = maths + phs + chem;
+        
+        system.debug((totalMksGot / totalMks) * percentVal);
+    }
+    
+    public static void topScore(integer maths, integer phs, integer chem) {
+        if(maths > phs && maths > chem){
+            system.debug('maths :: ' + maths);
+        }else if(phs > maths && phs > chem){
+            system.debug('phs :: ' + phs);
+        }else if(chem > phs && chem > maths){
+            system.debug('chem :: ' + chem);
+        }
+    }
+    
+     public static void grade(integer maths, integer phs, integer chem) {
+        final integer totalMks = 300;
+        final integer percentVal = 100;
+        integer totalMksGot = maths + phs + chem;
+        
+        decimal totalPercent = (totalMksGot / totalMks) * percentVal;
+         
+         if(totalPercent > 90 && totalPercent <= 100) {
+             system.debug('Grade A');
+         }else if(totalPercent > 80 && totalPercent <= 90) {
+             system.debug('Grade B');
+         }else if(totalPercent > 70 && totalPercent <= 80) {
+             system.debug('Grade C');
+         }else if(totalPercent > 60 && totalPercent <= 70) {
+             system.debug('Grade D');
+         }else {
+             system.debug('Grade E');
+         }
+    }
+
+}
