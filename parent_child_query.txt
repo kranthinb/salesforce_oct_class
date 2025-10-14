@@ -1,0 +1,11 @@
+List<Account> accList = [Select id,name,(select id,lastname from contacts),(select id,stagename from Opportunities) from account];
+for(Account  acc : accList) {
+    system.debug(acc.Name);
+    List<Contact> conList = acc.contacts;
+    for(contact con : conList) {
+        system.debug('accName :: ' + acc.name + ' contact name :: ' + con.lastname);
+    }
+    system.debug(conList);
+    List<Opportunity> oppList = acc.Opportunities;
+    system.debug(oppList);
+}
