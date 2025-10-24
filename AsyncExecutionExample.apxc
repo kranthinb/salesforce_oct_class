@@ -1,0 +1,17 @@
+public class AsyncExecutionExample implements Queueable {
+    public string inputValue;
+    public string inputvalSetData;    
+    
+    public AsyncExecutionExample(string input){
+        this.inputValue = input;
+    }
+    
+    public void setData(string inputvalSetData){
+        this.inputvalSetData = inputvalSetData;
+    }
+    
+    public void execute(System.QueueableContext qc){
+        system.debug('Queue running :: ' + this.inputValue);
+        system.debug('Queue running inputvalSetData :: ' + this.inputvalSetData);
+    }
+}
