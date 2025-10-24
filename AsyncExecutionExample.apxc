@@ -13,5 +13,12 @@ public class AsyncExecutionExample implements Queueable {
     public void execute(System.QueueableContext qc){
         system.debug('Queue running :: ' + this.inputValue);
         system.debug('Queue running inputvalSetData :: ' + this.inputvalSetData);
+        if(this.inputValue != 'test'){
+            AsyncExecutionExample queue = new AsyncExecutionExample('test');
+            queue.setData('test');
+            id jobId = System.enqueueJob(queue);
+            system.debug(jobId);
+        }
+
     }
 }
