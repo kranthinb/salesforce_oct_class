@@ -1,0 +1,28 @@
+public class FutureJobClass {
+    
+    public static void callBothMethods() {
+        nonFutureMethod();
+        for(integer i=0;i<51;i++){
+            futureMethod();
+        }
+        
+    }
+    
+    public static void nonFutureMethod() {
+        system.debug('This is running in synchronous thread');
+    }
+    
+    @future(callout=true)
+    public static void futureMethod() {
+        /*httpRequest req = new httpRequest();
+        req.setEndpoint('https://gorest.co.in/public/v2/posts');
+        req.setMethod('GET');
+        
+        http callout = new http();
+        httpresponse response = callout.send(req);
+        system.debug(response.getBody());*/
+        system.debug('callout');
+        
+    }
+
+}
