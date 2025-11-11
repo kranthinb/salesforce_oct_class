@@ -1,0 +1,20 @@
+HTTP http = NEW HTTP();
+HTTPREQUEST req = NEW HTTPREQUEST();
+req.setEndpoint('https://api.restful-api.dev/objects');
+req.setMethod('GET');
+HTTPRESPONSE response = http.send(req);
+
+List<Object> responseList = (List<Object>)JSON.deserializeUntyped(response.getBody());
+List<Map<string,Object>> parsedRespList = new List<Map<string,Object>>();
+
+for(object resp : responseList){
+    parsedRespList.add((Map<string,Object>)resp);
+}
+
+
+for(Map<string,Object> parsedRes : parsedRespList){
+    string devicename = (string)parsedRes.get('name');
+    if(devicename.contains('Apple')){
+        system.debug(devicename);
+    }
+}
